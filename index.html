@@ -60,7 +60,7 @@
 
   /* ---------- hero ---------- */
   main, footer { position: relative; z-index: 1; }
-  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: clamp(32px, 6vw, 72px); padding-bottom: clamp(32px, 6vw, 72px); }
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: clamp(20px, 5vh, 72px); padding-bottom: clamp(20px, 5vh, 72px); }
   .hero { display: flex; align-items: center; gap: clamp(16px, 3vw, 48px); flex-wrap: wrap; }
 
   /* the 1% sits on a red slab that runs off the left edge, angled on the right */
@@ -69,22 +69,22 @@
     margin: 0 .34em 0 0;
     padding: .1em .06em .06em 0;
     display: flex; align-items: flex-start;
-    font-weight: 900; font-size: clamp(170px, 30vw, 420px); line-height: .78; letter-spacing: -.02em;
+    font-weight: 900; font-size: clamp(170px, min(24vw, 40vh), 340px); line-height: .78; letter-spacing: -.02em;
     color: var(--white); background: var(--red);
   }
   .one::before { content: ""; position: absolute; top: 0; bottom: 0; right: 100%; width: 100vw; background: var(--red); }
   .one::after { content: ""; position: absolute; top: 0; bottom: 0; left: 100%; width: .28em; background: var(--red); clip-path: polygon(0 0, 100% 0, 0 100%); }
   .one .pct { font-size: .5em; line-height: 1; margin-left: .04em; margin-top: .04em; }
 
-  .strap { margin: 0; text-transform: uppercase; font-weight: 800; line-height: .92; font-size: clamp(48px, 8.5vw, 124px); }
+  .strap { margin: 0; text-transform: uppercase; font-weight: 800; line-height: .92; font-size: clamp(48px, min(7.2vw, 12vh), 104px); }
   .strap span { display: block; }
   .strap .thin { font-weight: 200; }
   .strap .accent { color: var(--cyan); }
 
-  .lede { max-width: 34em; margin: clamp(28px, 4vw, 48px) 0 0; font-size: clamp(20px, 2.1vw, 27px); line-height: 1.3; color: var(--mist); }
+  .lede { max-width: 34em; margin: clamp(20px, 4vh, 48px) 0 0; font-size: clamp(20px, 2.1vw, 27px); line-height: 1.3; color: var(--mist); }
   .lede b { color: var(--white); font-weight: 600; }
 
-  .ctas { margin-top: clamp(24px, 3vw, 36px); }
+  .ctas { margin-top: clamp(18px, 3.5vh, 36px); }
   .btn { display: inline-flex; align-items: center; gap: .55em; font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: clamp(18px, 1.7vw, 22px); padding: .85em 1.6em; border-radius: 999px; text-decoration: none; background: var(--red); color: var(--white); transition: transform .15s ease, background-color .15s ease; }
   .btn:hover { transform: translateY(-2px); background: var(--red-hover); }
   .btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
@@ -96,6 +96,10 @@
   footer a { text-decoration: none; }
   footer a:hover { color: var(--cyan); }
 
+  /* side by side whenever there's room; only phones stack the strapline under the 1% */
+  @media (min-width: 641px) {
+    .hero { flex-wrap: nowrap; }
+  }
   @media (max-width: 640px) {
     .by { white-space: normal; text-align: right; line-height: 1.15; max-width: 8.5em; }
     .orbit { right: -45vmax; width: 100vmax; }
