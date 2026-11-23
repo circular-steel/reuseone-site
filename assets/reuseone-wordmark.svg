@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="1180 520 4720 960" role="img" aria-label="ReuseOne">
+  <!-- Live text: needs Saira Condensed loaded (Thin/ExtraLight for "Reuse", ExtraBold for "One").
+       For use outside the website, convert text to curves in Affinity. -->
+  <g transform="matrix(3.74556,0,0,3.42824,200.51,-840.891)">
+    <text x="266.711" y="660.003" style="font-family:'Saira Condensed';font-weight:250;font-size:372.462px;fill:#002C6A;">R<tspan x="436.926 582.186 737.875 864.14" y="660.003 660.003 660.003 660.003">euse</tspan></text>
+  </g>
+  <g transform="matrix(3.74556,0,0,3.42824,2482.68,-830.676)">
+    <text x="402.101" y="660.003" style="font-family:'Saira Condensed';font-weight:800;font-size:372.462px;fill:#002C6A;">O<tspan x="576.04 729.867" y="660.003 660.003">ne</tspan></text>
+  </g>
+  <g transform="matrix(0,0.58776,-0.58776,0,5837.58,281.984)">
+    <path d="M1195.43,363.3L1347.57,451.141L1347.57,626.823L1195.43,714.664L1043.28,626.823L1043.28,451.141L1195.43,363.3Z" style="fill:#fff;stroke:#002C6A;stroke-width:47.64px;"/>
+  </g>
+</svg>

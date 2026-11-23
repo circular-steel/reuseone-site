@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="180 520 5720 960" role="img" aria-label="ReuseOne">
+  <!-- Mono white ReuseOne logo for dark or colour backgrounds. Geometry from ReuseOne_logo_Final.svg.
+       The nut in the "e" is cut out, so the background shows through.
+       Live text: needs Saira Condensed installed or loaded. For print or other uses, convert text to curves in Affinity. -->
+  <defs>
+    <mask id="nut-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="6000" height="2000">
+      <rect x="0" y="0" width="6000" height="2000" fill="#fff"/>
+      <g transform="matrix(0,0.58776,-0.58776,0,5837.58,281.984)">
+        <path d="M1195.43,363.3L1347.57,451.141L1347.57,626.823L1195.43,714.664L1043.28,626.823L1043.28,451.141L1195.43,363.3Z" fill="#000" stroke="#fff" stroke-width="47.64"/>
+      </g>
+    </mask>
+  </defs>
+  <g fill="#FFFFFF">
+    <g transform="matrix(3.74556,0,0,3.42824,200.51,-840.891)">
+      <text x="266.711" y="660.003" style="font-family:'Saira Condensed';font-weight:200;font-size:372.462px;">R<tspan x="436.926 582.186 737.875 864.14" y="660.003 660.003 660.003 660.003">euse</tspan></text>
+    </g>
+    <g mask="url(#nut-cut)">
+      <g transform="matrix(3.74556,0,0,3.42824,2482.68,-830.676)">
+        <text x="402.101" y="660.003" style="font-family:'Saira Condensed';font-weight:800;font-size:372.462px;">O<tspan x="576.04 729.867" y="660.003 660.003">ne</tspan></text>
+      </g>
+    </g>
+    <g transform="matrix(2.11089,0,0,2.11089,-2035.87,-490.895)">
+      <g transform="matrix(1.00218,0,0,1.00164,646.533,-15.2245)"><path d="M555.657,858.177L734.438,858.302L823.575,704.037L831.007,716.909L741.779,871.456L563.324,871.456L555.657,858.177Z"/></g>
+      <g transform="matrix(1.00164,0,0,1.00066,663.101,13.8002)"><path d="M458.069,688.576L547.296,534.029L725.752,534.029L733.457,547.375L555.003,547.375L465.774,701.923L458.069,688.576Z"/></g>
+      <g transform="translate(656.01,0)"><path d="M451.712,754.519L503.393,561.644L696.268,509.963L837.463,651.158L785.782,844.033L592.907,895.714L451.712,754.519ZM466.132,702.838L555.36,857.385L733.815,857.385L823.043,702.838L733.815,548.292L555.36,548.292L466.132,702.838Z"/></g>
+      <g transform="matrix(0,0.730343,-0.730343,0,2173.21,-784.943)"><path d="M2077.94,1505L2037.1,1528.58L1925.53,1464.16L2077.94,1505ZM1788.88,1385.27L1748.04,1361.69L1748.04,1232.86L1788.88,1385.27ZM1748.04,1075.07L1748.04,1027.91L1859.61,963.491L1748.04,1075.07ZM1996.26,884.596L2037.1,861.018L2148.67,925.435L1996.26,884.596ZM2285.32,1004.33L2326.16,1027.91L2326.16,1156.74L2285.32,1004.33ZM2326.16,1314.53L2326.16,1361.69L2214.59,1426.11L2326.16,1314.53Z"/></g>
+    </g>
+  </g>
+</svg>

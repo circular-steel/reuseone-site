@@ -1,0 +1,10 @@
+# ReuseOne holding page: plain HTML, no build step.
+[build]
+  publish = "."
+  command = ""
+
+# Keep the page out of search engines until launch (also set in index.html).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

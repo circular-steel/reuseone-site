@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ReuseOne | 1% reused steel. Every project.</title>
+<meta name="description" content="ReuseOne: clients and developers commit to at least 1% reused steel on every new project. A Circular Steel campaign, launching 2027.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#002C6A">
+<link rel="icon" href="assets/reuseone-icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@200;300;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #002C6A;
+    --navy-deep: #001B44;
+    --red: #FF2600;
+    --red-hover: #FF4A2B;
+    --cyan: #00B3E0;
+    --white: #FFFFFF;
+    --mist: #C9D6EA;
+    --display: 'Saira Condensed', 'Arial Narrow', sans-serif;
+    --gutter: clamp(16px, 5vw, 64px);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    min-height: 100svh;
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--display);
+    font-weight: 300;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: inherit; }
+
+  /* ---------- big rotating icon behind everything ---------- */
+  .orbit { position: fixed; right: -22vmax; top: 52%; width: 78vmax; transform: translateY(-50%); pointer-events: none; z-index: 0; }
+  .orbit svg { width: 100%; height: auto; display: block; animation: spin 90s linear infinite; }
+  .orbit .ink { fill: var(--navy-deep); }
+  .orbit .ink-accent { fill: rgba(0, 179, 224, .25); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .wrap { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+  /* ---------- header: mono white logo ---------- */
+  header { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: clamp(14px, 2vw, 22px); padding-bottom: clamp(14px, 2vw, 22px); }
+  .logo { display: block; text-decoration: none; }
+  .logo svg { display: block; width: clamp(170px, 22vw, 280px); height: auto; }
+  .logo .mono { fill: var(--white); }
+  .logo .nut { fill: var(--navy); stroke: var(--white); stroke-width: 47.64px; }
+  .by { font-size: clamp(14px, 1.4vw, 17px); letter-spacing: .08em; text-transform: uppercase; color: var(--mist); text-decoration: none; white-space: nowrap; }
+  .by strong { color: var(--white); font-weight: 700; }
+  .by:hover strong { color: var(--cyan); }
+
+  /* ---------- hero ---------- */
+  main, footer { position: relative; z-index: 1; }
+  main { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-top: clamp(32px, 6vw, 72px); padding-bottom: clamp(32px, 6vw, 72px); }
+  .hero { display: flex; align-items: center; gap: clamp(16px, 3vw, 48px); flex-wrap: wrap; }
+
+  /* the 1% sits on a red slab that runs off the left edge, angled on the right */
+  .one {
+    position: relative;
+    margin: 0 .34em 0 0;
+    padding: .1em .06em .06em 0;
+    display: flex; align-items: flex-start;
+    font-weight: 900; font-size: clamp(170px, 30vw, 420px); line-height: .78; letter-spacing: -.02em;
+    color: var(--white); background: var(--red);
+  }
+  .one::before { content: ""; position: absolute; top: 0; bottom: 0; right: 100%; width: 100vw; background: var(--red); }
+  .one::after { content: ""; position: absolute; top: 0; bottom: 0; left: 100%; width: .28em; background: var(--red); clip-path: polygon(0 0, 100% 0, 0 100%); }
+  .one .pct { font-size: .5em; line-height: 1; margin-left: .04em; margin-top: .04em; }
+
+  .strap { margin: 0; text-transform: uppercase; font-weight: 800; line-height: .92; font-size: clamp(48px, 8.5vw, 124px); }
+  .strap span { display: block; }
+  .strap .thin { font-weight: 200; }
+  .strap .accent { color: var(--cyan); }
+
+  .lede { max-width: 34em; margin: clamp(28px, 4vw, 48px) 0 0; font-size: clamp(20px, 2.1vw, 27px); line-height: 1.3; color: var(--mist); }
+  .lede b { color: var(--white); font-weight: 600; }
+
+  .ctas { margin-top: clamp(24px, 3vw, 36px); }
+  .btn { display: inline-flex; align-items: center; gap: .55em; font-family: var(--display); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: clamp(18px, 1.7vw, 22px); padding: .85em 1.6em; border-radius: 999px; text-decoration: none; background: var(--red); color: var(--white); transition: transform .15s ease, background-color .15s ease; }
+  .btn:hover { transform: translateY(-2px); background: var(--red-hover); }
+  .btn:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+  .btn .arrow { transition: transform .15s ease; }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 20px; padding-bottom: clamp(20px, 3vw, 32px); font-size: 15px; letter-spacing: .06em; text-transform: uppercase; color: var(--mist); }
+  footer::before { content: ""; flex-basis: 100%; height: 4px; margin-bottom: 14px; background: linear-gradient(90deg, var(--red) 0 60%, var(--cyan) 60% 85%, var(--white) 85%); }
+  footer a { text-decoration: none; }
+  footer a:hover { color: var(--cyan); }
+
+  @media (max-width: 640px) {
+    .by { white-space: normal; text-align: right; line-height: 1.15; max-width: 8.5em; }
+    .orbit { right: -45vmax; width: 100vmax; }
+    .hero { gap: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .orbit svg { animation: none; }
+    .btn, .btn .arrow { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="orbit" aria-hidden="true">
+    <svg viewBox="185 537 1050 912">
+      <g transform="matrix(2.11089,0,0,2.11089,-2035.87,-490.895)">
+        <g transform="matrix(1.00218,0,0,1.00164,646.533,-15.2245)"><path class="ink" d="M555.657,858.177L734.438,858.302L823.575,704.037L831.007,716.909L741.779,871.456L563.324,871.456L555.657,858.177Z"/></g>
+        <g transform="matrix(1.00164,0,0,1.00066,663.101,13.8002)"><path class="ink-accent" d="M458.069,688.576L547.296,534.029L725.752,534.029L733.457,547.375L555.003,547.375L465.774,701.923L458.069,688.576Z"/></g>
+        <g transform="translate(656.01,0)"><path class="ink" d="M451.712,754.519L503.393,561.644L696.268,509.963L837.463,651.158L785.782,844.033L592.907,895.714L451.712,754.519ZM466.132,702.838L555.36,857.385L733.815,857.385L823.043,702.838L733.815,548.292L555.36,548.292L466.132,702.838Z"/></g>
+        <g transform="matrix(0,0.730343,-0.730343,0,2173.21,-784.943)"><path class="ink" d="M2077.94,1505L2037.1,1528.58L1925.53,1464.16L2077.94,1505ZM1788.88,1385.27L1748.04,1361.69L1748.04,1232.86L1788.88,1385.27ZM1748.04,1075.07L1748.04,1027.91L1859.61,963.491L1748.04,1075.07ZM1996.26,884.596L2037.1,861.018L2148.67,925.435L1996.26,884.596ZM2285.32,1004.33L2326.16,1027.91L2326.16,1156.74L2285.32,1004.33ZM2326.16,1314.53L2326.16,1361.69L2214.59,1426.11L2326.16,1314.53Z"/></g>
+      </g>
+    </svg>
+  </div>
+
+  <header class="wrap">
+    <a class="logo" href="/" aria-label="ReuseOne home">
+      <!-- Mono white logo: same geometry as ReuseOne_logo_Final.svg; the nut is a navy hexagon in the white "e" -->
+      <svg viewBox="180 520 5720 960" aria-hidden="true">
+        <g transform="matrix(3.74556,0,0,3.42824,200.51,-840.891)">
+          <text class="mono" x="266.711" y="660.003" style="font-family:'Saira Condensed';font-weight:200;font-size:372.462px;">R<tspan x="436.926 582.186 737.875 864.14" y="660.003 660.003 660.003 660.003">euse</tspan></text>
+        </g>
+        <g transform="matrix(3.74556,0,0,3.42824,2482.68,-830.676)">
+          <text class="mono" x="402.101" y="660.003" style="font-family:'Saira Condensed';font-weight:800;font-size:372.462px;">O<tspan x="576.04 729.867" y="660.003 660.003">ne</tspan></text>
+        </g>
+        <g transform="matrix(0,0.58776,-0.58776,0,5837.58,281.984)">
+          <path class="nut" d="M1195.43,363.3L1347.57,451.141L1347.57,626.823L1195.43,714.664L1043.28,626.823L1043.28,451.141L1195.43,363.3Z"/>
+        </g>
+        <g class="mono" transform="matrix(2.11089,0,0,2.11089,-2035.87,-490.895)">
+          <g transform="matrix(1.00218,0,0,1.00164,646.533,-15.2245)"><path d="M555.657,858.177L734.438,858.302L823.575,704.037L831.007,716.909L741.779,871.456L563.324,871.456L555.657,858.177Z"/></g>
+          <g transform="matrix(1.00164,0,0,1.00066,663.101,13.8002)"><path d="M458.069,688.576L547.296,534.029L725.752,534.029L733.457,547.375L555.003,547.375L465.774,701.923L458.069,688.576Z"/></g>
+          <g transform="translate(656.01,0)"><path d="M451.712,754.519L503.393,561.644L696.268,509.963L837.463,651.158L785.782,844.033L592.907,895.714L451.712,754.519ZM466.132,702.838L555.36,857.385L733.815,857.385L823.043,702.838L733.815,548.292L555.36,548.292L466.132,702.838Z"/></g>
+          <g transform="matrix(0,0.730343,-0.730343,0,2173.21,-784.943)"><path d="M2077.94,1505L2037.1,1528.58L1925.53,1464.16L2077.94,1505ZM1788.88,1385.27L1748.04,1361.69L1748.04,1232.86L1788.88,1385.27ZM1748.04,1075.07L1748.04,1027.91L1859.61,963.491L1748.04,1075.07ZM1996.26,884.596L2037.1,861.018L2148.67,925.435L1996.26,884.596ZM2285.32,1004.33L2326.16,1027.91L2326.16,1156.74L2285.32,1004.33ZM2326.16,1314.53L2326.16,1361.69L2214.59,1426.11L2326.16,1314.53Z"/></g>
+        </g>
+      </svg>
+    </a>
+    <a class="by" href="https://circularsteel.com">A <strong>Circular Steel</strong> campaign</a>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <p class="one" aria-hidden="true">1<span class="pct">%</span></p>
+      <h1 class="strap">
+        <span class="thin">Reused steel.</span>
+        <span>Every</span>
+        <span class="accent">project.</span>
+      </h1>
+    </div>
+
+    <p class="lede">Clients and developers commit to reusing <b>at least 1% steel on every new project.</b> Free and voluntary. Launching 2027.</p>
+
+    <div class="ctas">
+      <a class="btn" href="mailto:reuseone@circularsteel.com?subject=ReuseOne">Count us in <span class="arrow" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <span>&copy; 2026 Circular Steel</span>
+    <a href="mailto:reuseone@circularsteel.com">reuseone@circularsteel.com</a>
+  </footer>
+
+</body>
+</html>
